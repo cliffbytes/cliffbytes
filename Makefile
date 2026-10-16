@@ -4,7 +4,7 @@ SRC_DIR     = src
 INC_DIR     = inc
 OBJ_DIR     = obj
 
-FILES       = main.c utils.c ft_strlen.c
+FILES       = main.c
 SRCS        = $(addprefix $(SRC_DIR)/, $(FILES))
 OBJS        = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 DEPS        = $(OBJS:.o=.d)
