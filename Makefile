@@ -7,7 +7,6 @@ OBJ_DIR     = obj
 FILES       = main.c
 SRCS        = $(addprefix $(SRC_DIR)/, $(FILES))
 OBJS        = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-DEPS        = $(OBJS:.o=.d)
 
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror
@@ -33,5 +32,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
--include $(DEPS)
